@@ -16,7 +16,7 @@
 
 ####Para gerar a imagem do docker que executará a aplicação
 
-`docker build -t iebes .`
+`docker build --no-cache -t iebes .`
 
 ####Para criar o container que executará a aplicação
 
