@@ -1,0 +1,21 @@
+{
+  "name": "IEBES",
+  "version": "0.1.0",
+  "authors": [
+    "Hítalo Silva <hitalos@gmail.com>"
+  ],
+  "description": "Busca de membros no sistema church",
+  "main": "webroot/index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "webroot/vendors"
+  ],
+  "dependencies": {
+    "material-design-lite": "~1.0.0",
+    "angular": "~1.4.2",
+    "angular-route": "~1.4.2",
+    "angular-locale-pt-br": "~1.3.15"
+  }
+}

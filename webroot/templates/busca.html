@@ -1,0 +1,9 @@
+<div ng-if="search.length > 2">
+	<div class="mdl-card mdl-shadow--6dp membro-card" ng-repeat="membro in membros | filter:search">
+		<div class="mdl-card__title mdl-card--expand"></div>
+		<div class="mdl-badge" data-badge="{{membro.idade}}"></div>
+		<div class="mdl-card__actions mdl-card--border">
+			<span>{{membro.NomeMembro}}</span>
+		</div>
+	</div>
+</div>

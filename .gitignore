@@ -1,0 +1,5 @@
+node_modules
+webroot/vendors
+tmp
+vendor
+church11.sqlite
