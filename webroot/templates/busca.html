@@ -10,14 +10,16 @@
 <div ng-if="search.length > 2">
 	<div class="mdl-card mdl-shadow--6dp membro-card" ng-repeat="membro in membros | filter:search">
 		<div class="mdl-grid">
-			<div class="mdl-cell mdl-cell--1-col-phone"><img src="http://church.elshaddaimaceio.org.br/church11/tmp/sc_fotomembro_1802597b6ac9ffb27826c91b37fc7d06e5e004.gif" width="100%" height="100%" alt="foto"></div>
+			<div class="mdl-cell mdl-cell--1-col-phone mdl-badge" data-badge="{{membro.idade}}">
+				<img src="http://church.elshaddaimaceio.org.br/church11/tmp/sc_fotomembro_1802597b6ac9ffb27826c91b37fc7d06e5e004.gif" width="100%" height="100%" alt="Foto de {{membro.NomeMembro}}">
+			</div>
 			<div class="mdl-cell mdl-cell--3-col-phone">
 				<div class="mdl-card__title">
 					<strong>{{membro.NomeMembro}}</strong>
 				</div>
 				<div>
-					<p class="card-text"><i class="material-icons">event</i> {{membro.DataNascMembro}}</p>
-					<p class="card-text"><i class="material-icons">email</i> {{membro.eMailMembro}}</p>
+					<p class="card-text"><i class="material-icons">event</i> {{membro.DataNascMembro | date}}</p>
+					<p ng-if="membro.eMailMembro" class="card-text"><a href="mailto:{{membro.eMailMembro}}"><i class="material-icons">email</i> {{membro.eMailMembro}}</a></p>
 				</div>
 			</div>
 		</div>
