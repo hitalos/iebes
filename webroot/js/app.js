@@ -15,7 +15,7 @@ app.config(function($routeProvider){
 });
 
 app.controller('MembrosController', function($scope, $http){
-	$http.get('/api/').success(function(data, status, headers, config) {
+	$http.get('api/membros').success(function(data, status, headers, config) {
     	 $scope.membros = data;
     }).
     error(function(data, status, headers, config) {
@@ -24,7 +24,7 @@ app.controller('MembrosController', function($scope, $http){
 });
 
 app.controller('AniversariantesController', function($scope, $http){
-	$http.get('/api/?aniversariantes').success(function(data, status, headers, config) {
+	$http.get('api/aniversariantes').success(function(data, status, headers, config) {
     	 $scope.aniversariantes = data;
     }).
     error(function(data, status, headers, config) {

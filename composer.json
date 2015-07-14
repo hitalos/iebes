@@ -1,0 +1,12 @@
+{
+    "name": "hitalos/iebes",
+    "authors": [
+        {
+            "name": "Hítalo Silva",
+            "email": "hitalos@jfal.jus.br"
+        }
+    ],
+    "require": {
+        "slim/slim": "^2.6"
+    }
+}
