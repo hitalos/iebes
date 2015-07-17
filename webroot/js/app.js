@@ -15,6 +15,12 @@ app.config(function($routeProvider){
 });
 
 app.controller('MembrosController', function($scope, $http){
+	angular.element(document).ready(
+    	function(){
+			componentHandler.upgradeAllRegistered();
+		}
+	);
+
 	$http.get('api/membros').success(function(data, status, headers, config) {
     	 $scope.membros = data;
     }).
