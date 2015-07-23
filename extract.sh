@@ -1,15 +1,10 @@
 #!/bin/bash
-if [ "$1" == "" ]; then
-	echo "Forneça um arquivo ZIP de backup!"	
-	echo "$0 <church.zip>"
-	exit 1;
-fi
-
 IMPORT='import.sql'
 SQLITE='church11.sqlite'
 mkdir tmp
-unzip $1 -d tmp
 cd tmp
+wget -O backup.zip http://church.elshaddaimaceio.org.br/church11/file/doc/backup.php
+unzip backup.zip
 iconv -f iso-8859-1 -t utf-8 church11.sql > $IMPORT
 mv $IMPORT church.sql
 
