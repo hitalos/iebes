@@ -16,7 +16,7 @@
 		<div ng-switch-default class="mdl-card mdl-shadow--6dp membro-card" ng-repeat="membro in membros | filter:search">
 			<div class="mdl-grid">
 				<div class="mdl-cell mdl-cell--1-col-phone mdl-badge" data-badge="{{membro.idade}}">
-					<img src="http://church.elshaddaimaceio.org.br/church11/tmp/sc_fotomembro_1802597b6ac9ffb27826c91b37fc7d06e5e004.gif" width="100%" height="100%" alt="Foto de {{membro.NomeMembro}}">
+					<img ng-src="http://church.elshaddaimaceio.org.br/church11/file/img/{{membro.FotoMembro}}" width="100%" height="100%" alt="Foto de {{membro.NomeMembro}}">
 				</div>
 				<div class="mdl-cell mdl-cell--3-col-phone">
 					<div class="mdl-card__title">
