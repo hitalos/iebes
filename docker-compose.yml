@@ -1,0 +1,6 @@
+web:
+  build: .
+  volumes:
+    - ./:/var/www/localhost
+  ports:
+    - "8888:80"
