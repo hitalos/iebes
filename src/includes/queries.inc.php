@@ -6,6 +6,7 @@ $queries['membros'] = "SELECT
         DataNascMembro,
         strftime('%Y', 'now') - strftime('%Y', DataNascMembro) AS idade,
         eMailMembro,
+        SituacaoMembro,
         FotoMembro
     FROM
         tblmembros
@@ -18,6 +19,7 @@ $queries['aniversariantes'] = "SELECT
             DataNascMembro,
             strftime('%Y', 'now') - strftime('%Y', DataNascMembro) AS idade,
             eMailMembro,
+            SituacaoMembro,
             FotoMembro
         FROM
             tblmembros

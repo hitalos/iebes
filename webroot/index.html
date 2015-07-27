@@ -9,7 +9,6 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 	<meta name="apple-mobile-web-app-title" content="IEBES">
 	<link rel="apple-touch-icon-precomposed" href="images/logo.png">
-
 	<title>IEBES</title>
 	<!-- bower:css -->
 	<link rel="stylesheet" href="vendors/material-design-lite/material.min.css" />
@@ -20,7 +19,6 @@
 		width: 90%;
 		margin: auto;
 		margin-top: 3em;
-		/*background: url("http://church.elshaddaimaceio.org.br/church11/tmp/sc_fotomembro_1802597b6ac9ffb27826c91b37fc7d06e5e004.gif") center / cover;*/
 	}
 	.membro-card > .mdl-card__actions {
 		background: rgba(0, 0, 0, 0.5);
@@ -39,8 +37,12 @@
 	.card-text > * {
 		vertical-align: middle;
 	}
+	.mdl-badge.badge1::after,
+	.mdl-badge.badge2::after,
+	.mdl-badge.badge3::after {
+		background-color: gray;
+	}
 	</style>
-
 </head>
 <body>
 	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
@@ -52,19 +54,12 @@
 	<div class="mdl-layout__drawer">
 		<span class="mdl-layout-title">Opções</span>
 		<nav class="mdl-navigation">
-			<!-- <a class="mdl-navigation__link" href="#/church">Ir para o Church</a> -->
 			<a class="mdl-navigation__link" href="#/"><i class="material-icons">search</i>Busca</a>
 			<a class="mdl-navigation__link" href="#/aniversariantes"><i class="material-icons">event</i>Aniversariantes do dia</a>
-			<!-- <a class="mdl-navigation__link" href="#/lembretes">Lembretes</a> -->
 		</nav>
 	</div>
 	<main class="mdl-layout__content" ng-view>
 	</main>
-	<!--
-	<footer class="mdl-layout__footer">
-	<span>Desenvolvido por: Hítalo Silva</span>
-	</footer>
-	-->
 </div>
 <!-- bower:js -->
 <script src="vendors/material-design-lite/material.min.js"></script>
