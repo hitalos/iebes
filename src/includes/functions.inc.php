@@ -4,13 +4,9 @@ function db(){
 }
 
 function queryToJson($res){
-    $ret = "[\n\t";
-	$ret .= json_encode($res->fetch(), JSON_FORCE_OBJECT | JSON_UNESCAPED_UNICODE);
-	while($row = $res->fetch()){
-		$ret .= ",\n\t";
+	$ret = $res->fetchAll();
+	foreach($ret as &$row){
 		$row['FotoMembro'] = rawurlencode(utf8_decode($row['FotoMembro']));
-		$ret .= json_encode($row, JSON_FORCE_OBJECT | JSON_UNESCAPED_UNICODE);
 	}
-	$ret .= "\n]";
-    return $ret;
+	return json_encode($ret);
 }
