@@ -4,7 +4,7 @@ $queries['membros'] = "SELECT
         CodMembro,
         NomeMembro,
         DataNascMembro,
-        strftime('%Y', 'now') - strftime('%Y', DataNascMembro) AS idade,
+        (strftime('%Y', 'now') - strftime('%Y', DataNascMembro)) - (strftime('%m%d', 'now') < strftime('%m%d', DataNascMembro)) AS idade,
         eMailMembro,
         SituacaoMembro,
         FotoMembro
