@@ -1,25 +1,25 @@
-#IEBES
+# IEBES
 
-##Instalar dependências:
-####Dependências do Javascript
+## Instalar dependências:
+#### Dependências do Javascript
 `bower install`  
-####Dependências do PHP
+#### Dependências do PHP
 `composer install`
-####Importar Banco de Dados
+#### Importar Banco de Dados
 Executar o script:  
 `./extract.sh`
 
-##Em ambiente de produção
-####Configurações do apache:
+## Em ambiente de produção
+#### Configurações do apache:
 * Habilitar o mod_deflate
 * Permitir ao apache ter configurações alteradas por arquivos `.htaccess`
 
-##Em ambiente de desenvolvimento
-####Para instalar o grunt
+## Em ambiente de desenvolvimento
+#### Para instalar o grunt
 
 `npm install`
 
-####Para gerar a imagem do docker que executará a aplicação
+#### Para gerar a imagem do docker que executará a aplicação
 
 * Se você tem o `docker-compose`:  
 `docker-compose build --no-cache`  
